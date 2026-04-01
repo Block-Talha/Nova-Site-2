@@ -7,7 +7,7 @@ export function Testimonials() {
     <section id="testimonials" className="overflow-hidden px-6 py-24">
       <div className="mx-auto max-w-7xl">
         <h2 className="mb-4 text-center font-headline text-4xl font-extrabold text-white lg:text-5xl">
-          Feedback By Our Clients
+          Feedback By Our Client
         </h2>
         <p className="mb-16 text-center text-on-surface-variant">
           Success stories from salons that transformed their bookings with Nova
