@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { MaterialIcon } from "@/components/MaterialIcon";
 import { testimonials } from "@/lib/site-content";
 
 export function Testimonials() {
@@ -13,7 +12,7 @@ export function Testimonials() {
           Success stories from salons that transformed their bookings with Nova
           Sync.
         </p>
-        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-3">
           {testimonials.map((testimonial) => (
             <article
               key={testimonial.name}
@@ -24,9 +23,6 @@ export function Testimonials() {
               }
             >
               <div>
-                <div className="mb-6 text-primary-fixed opacity-50">
-                  <MaterialIcon name="format_quote" className="text-3xl sm:text-4xl" />
-                </div>
                 <p className="mb-8 text-base italic leading-relaxed text-on-surface sm:text-lg">
                   &quot;{testimonial.quote}&quot;
                 </p>

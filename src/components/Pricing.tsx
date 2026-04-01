@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { MaterialIcon } from "@/components/MaterialIcon";
 import { plans, showPricing } from "@/lib/site-content";
 
 export function Pricing() {
@@ -17,7 +16,7 @@ export function Pricing() {
             </p>
           </div>
         </div>
-        <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+        <div className="mt-12 grid gap-6 md:grid-cols-3">
           {plans.map((plan) => {
             const isFeatured = plan.featured;
 
@@ -59,21 +58,15 @@ export function Pricing() {
                   {plan.features.map((feature) => (
                     <li
                       key={feature}
-                      className={`flex items-start gap-3 text-sm ${
+                      className={`text-sm leading-relaxed ${
                         isFeatured ? "text-white" : "text-on-surface-variant"
                       }`}
                     >
-                      <MaterialIcon
-                        name="check_circle"
-                        filled={isFeatured}
-                        className="mt-0.5 shrink-0 text-lg text-primary-fixed"
-                      />
                       {feature}
                     </li>
                   ))}
                   {plan.footerNote ? (
-                    <li className="flex items-center gap-3 border-t border-outline-variant/20 pt-4 text-[10px] font-bold uppercase tracking-tight text-primary-fixed/80">
-                      <MaterialIcon name="info" className="shrink-0 text-sm" />
+                    <li className="border-t border-outline-variant/20 pt-4 text-[10px] font-bold uppercase tracking-tight text-primary-fixed/80">
                       {plan.footerNote}
                     </li>
                   ) : null}
