@@ -4,20 +4,20 @@ import { plans, showPricing } from "@/lib/site-content";
 
 export function Pricing() {
   return (
-    <section id="pricing" className="bg-surface-container-low px-6 py-24">
-      <div className="mx-auto max-w-7xl">
-        <div className="mb-16 flex flex-col items-center justify-between gap-8">
+    <section id="pricing" className="section-space bg-surface-container-low">
+      <div className="content-shell">
+        <div className="flex flex-col items-center justify-between gap-8">
           <div className="w-full">
-            <h2 className="mb-6 text-center font-headline text-4xl font-extrabold text-white sm:whitespace-nowrap lg:text-4xl">
+            <h2 className="mb-4 text-center font-headline text-3xl font-extrabold text-white sm:text-4xl lg:text-5xl">
               Tailored Solution for Thriving Salons
             </h2>
-            <p className="text-center leading-relaxed text-on-surface-variant sm:whitespace-nowrap">
+            <p className="mx-auto max-w-2xl text-center text-sm leading-relaxed text-on-surface-variant sm:text-base">
               Choosing the plan that meshes your ambition, from local boutiques
               to nationwide chains, we scale with you.
             </p>
           </div>
         </div>
-        <div className="grid gap-8 md:grid-cols-3">
+        <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {plans.map((plan) => {
             const isFeatured = plan.featured;
 
@@ -26,12 +26,12 @@ export function Pricing() {
                 key={plan.name}
                 className={
                   isFeatured
-                    ? "relative rounded-xl border-2 border-primary-fixed bg-surface-container-highest p-8 shadow-[0_20px_40px_rgba(0,0,0,0.6)] md:-translate-y-4"
-                    : "group relative rounded-xl border border-outline-variant/10 bg-surface p-8 transition-colors hover:border-primary-fixed/30"
+                    ? "relative rounded-xl border-2 border-primary-fixed bg-surface-container-highest p-6 shadow-[0_20px_40px_rgba(0,0,0,0.6)] sm:p-8 xl:-translate-y-4"
+                    : "group relative rounded-xl border border-outline-variant/10 bg-surface p-6 transition-colors hover:border-primary-fixed/30 sm:p-8"
                 }
               >
                 {isFeatured ? (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-primary-fixed px-4 py-1 text-[10px] font-black uppercase tracking-[0.2em] text-on-primary-fixed">
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-primary-fixed px-4 py-1 text-[10px] font-black uppercase tracking-[0.08em] text-on-primary-fixed">
                     {plan.badge}
                   </div>
                 ) : (
@@ -59,21 +59,21 @@ export function Pricing() {
                   {plan.features.map((feature) => (
                     <li
                       key={feature}
-                      className={`flex items-center gap-3 text-sm ${
+                      className={`flex items-start gap-3 text-sm ${
                         isFeatured ? "text-white" : "text-on-surface-variant"
                       }`}
                     >
                       <MaterialIcon
                         name="check_circle"
                         filled={isFeatured}
-                        className="text-lg text-primary-fixed"
+                        className="mt-0.5 shrink-0 text-lg text-primary-fixed"
                       />
                       {feature}
                     </li>
                   ))}
                   {plan.footerNote ? (
-                    <li className="flex items-center gap-3 border-t border-outline-variant/20 pt-4 text-[10px] font-bold uppercase tracking-tighter text-primary-fixed/80">
-                      <MaterialIcon name="info" className="text-sm" />
+                    <li className="flex items-center gap-3 border-t border-outline-variant/20 pt-4 text-[10px] font-bold uppercase tracking-tight text-primary-fixed/80">
+                      <MaterialIcon name="info" className="shrink-0 text-sm" />
                       {plan.footerNote}
                     </li>
                   ) : null}

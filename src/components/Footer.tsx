@@ -10,17 +10,17 @@ const footerLinks = [
 
 export function Footer() {
   return (
-    <footer className="w-full border-t border-zinc-800/20 bg-black px-6 py-12">
-      <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-8 md:flex-row">
+    <footer className="w-full border-t border-zinc-800/20 bg-black py-10 sm:py-12">
+      <div className="content-shell flex flex-col items-center justify-between gap-8 md:flex-row">
         <div className="flex flex-col items-center md:items-start">
           <div className="mb-4">
             <BrandLogo compact />
           </div>
           <p className="text-center text-sm text-zinc-500 md:text-left">
-            © 2024 Nova Sync Marketing Agency. All Rights Reserved.
+            Copyright 2026 Nova Sync Marketing Agency. All rights reserved.
           </p>
         </div>
-        <div className="flex flex-wrap justify-center gap-8">
+        <div className="flex flex-wrap justify-center gap-x-6 gap-y-3 sm:gap-x-8">
           {footerLinks.map((link) => (
             <Link
               key={link.label}

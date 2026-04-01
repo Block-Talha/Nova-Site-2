@@ -60,7 +60,7 @@ export const plans: Plan[] = [
     name: "Professional Plan",
     subtitle: "The elite choice for high-volume salons.",
     price: "$510 /mo",
-    badge: "Most Popular • 30% Off",
+    badge: "Most Popular - 30% Off",
     featured: true,
     emphasis: "strong" as const,
     features: [

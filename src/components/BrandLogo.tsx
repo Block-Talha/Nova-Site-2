@@ -7,17 +7,17 @@ type BrandLogoProps = {
 
 export function BrandLogo({ compact = false }: BrandLogoProps) {
   return (
-    <div className="flex items-center gap-3">
+    <div className="flex items-center gap-2.5 sm:gap-3">
       <Image
         src={logoMark}
         alt="Nova Sync logo mark"
-        className={compact ? "h-8 w-auto" : "h-10 w-auto"}
+        className={compact ? "h-8 w-auto" : "h-8 w-auto sm:h-10"}
       />
       <span
         className={
           compact
-            ? "font-headline text-xl font-extrabold tracking-tight text-white"
-            : "font-headline text-2xl font-extrabold tracking-tight text-white"
+            ? "font-headline text-lg font-extrabold tracking-tight text-white sm:text-xl"
+            : "font-headline text-lg font-extrabold tracking-tight text-white sm:text-xl lg:text-2xl"
         }
       >
         Nova Sync

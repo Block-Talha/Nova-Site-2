@@ -4,30 +4,30 @@ import { testimonials } from "@/lib/site-content";
 
 export function Testimonials() {
   return (
-    <section id="testimonials" className="overflow-hidden px-6 py-24">
-      <div className="mx-auto max-w-7xl">
-        <h2 className="mb-4 text-center font-headline text-4xl font-extrabold text-white lg:text-5xl">
+    <section id="testimonials" className="section-space overflow-hidden">
+      <div className="content-shell">
+        <h2 className="mb-4 text-center font-headline text-3xl font-extrabold text-white sm:text-4xl lg:text-5xl">
           Feedback By Our Clients
         </h2>
-        <p className="mb-16 text-center text-on-surface-variant">
+        <p className="mx-auto mb-12 max-w-2xl text-center text-sm text-on-surface-variant sm:mb-16 sm:text-base">
           Success stories from salons that transformed their bookings with Nova
           Sync.
         </p>
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {testimonials.map((testimonial) => (
             <article
               key={testimonial.name}
               className={
                 testimonial.featured === true
-                  ? "flex flex-col justify-between rounded-xl border-l-4 border-primary-fixed bg-surface-container-high p-8"
-                  : "flex flex-col justify-between rounded-xl border border-outline-variant/10 bg-surface-container p-8"
+                  ? "flex h-full flex-col justify-between rounded-xl border-l-4 border-primary-fixed bg-surface-container-high p-6 sm:p-8"
+                  : "flex h-full flex-col justify-between rounded-xl border border-outline-variant/10 bg-surface-container p-6 sm:p-8"
               }
             >
               <div>
                 <div className="mb-6 text-primary-fixed opacity-50">
-                  <MaterialIcon name="format_quote" className="text-4xl" />
+                  <MaterialIcon name="format_quote" className="text-3xl sm:text-4xl" />
                 </div>
-                <p className="mb-8 text-lg italic leading-relaxed text-on-surface">
+                <p className="mb-8 text-base italic leading-relaxed text-on-surface sm:text-lg">
                   &quot;{testimonial.quote}&quot;
                 </p>
               </div>
@@ -37,13 +37,13 @@ export function Testimonials() {
                   alt={`Portrait of ${testimonial.name}`}
                   width={48}
                   height={48}
-                  className="h-12 w-12 rounded-full border-2 border-primary-fixed object-cover"
+                  className="h-11 w-11 rounded-full border-2 border-primary-fixed object-cover sm:h-12 sm:w-12"
                 />
                 <div>
-                  <p className="text-sm font-bold text-white">
+                  <p className="text-sm font-bold text-white sm:text-base">
                     {testimonial.name}
                   </p>
-                  <p className="text-[10px] font-bold uppercase tracking-widest text-primary-fixed/70">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.12em] text-primary-fixed/70">
                     {testimonial.company}
                   </p>
                 </div>

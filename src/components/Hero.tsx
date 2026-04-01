@@ -7,21 +7,21 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="relative flex min-h-screen items-center justify-center overflow-hidden px-6 pb-12 pt-32"
+      className="relative overflow-hidden pt-28 sm:pt-32"
     >
       <div className="bg-hero-radial absolute inset-0 z-0 opacity-90" />
-      <div className="relative z-10 grid w-full max-w-7xl items-center gap-12 lg:grid-cols-2">
+      <div className="content-shell relative z-10 grid min-h-[calc(100svh-5rem)] items-center gap-10 pb-14 sm:pb-16 lg:grid-cols-2 lg:gap-14">
         <div className="space-y-8">
-          <div className="inline-flex items-center gap-2 rounded-full border border-outline-variant/20 bg-surface-container-highest px-4 py-2 text-xs font-bold uppercase tracking-widest text-primary-fixed">
+          <div className="inline-flex items-center gap-2 rounded-full border border-outline-variant/20 bg-surface-container-highest px-3 py-2 text-[10px] font-bold uppercase tracking-[0.22em] text-primary-fixed sm:px-4 sm:text-xs">
             <span className="h-2 w-2 animate-pulse rounded-full bg-primary-fixed" />
             Elite Salon Marketing
           </div>
-          <h1 className="max-w-3xl font-headline text-5xl font-extrabold leading-[1.1] tracking-tighter text-white lg:text-7xl">
+          <h1 className="max-w-3xl font-headline text-4xl font-extrabold leading-[1.05] tracking-tighter text-white sm:text-5xl lg:text-7xl">
             Manage &amp; Grow Your{" "}
             <span className="text-glow text-primary-fixed">Salon Business</span>{" "}
             With Nova Sync
           </h1>
-          <p className="max-w-lg text-lg leading-relaxed text-on-surface-variant lg:text-xl">
+          <p className="max-w-xl text-base leading-relaxed text-on-surface-variant sm:text-lg lg:text-xl">
             Elevate your brand presence and streamline operations with our
             electric-precision marketing solutions designed for the modern
             grooming industry.
@@ -29,14 +29,14 @@ export function Hero() {
           <div className="flex flex-col gap-4 pt-4 sm:flex-row">
             <Link
               href="#pricing"
-              className="rounded-xl bg-primary-container px-8 py-4 font-headline font-bold uppercase tracking-widest text-on-primary-container transition-all hover:shadow-[0_0_30px_rgba(202,253,0,0.4)] active:scale-95"
+              className="w-full rounded-xl bg-primary-container px-8 py-4 text-center font-headline font-bold uppercase tracking-widest text-on-primary-container transition-all hover:shadow-[0_0_30px_rgba(202,253,0,0.4)] active:scale-95 sm:w-auto"
             >
               Claim Your Strategy
             </Link>
           </div>
         </div>
-        <div className="relative">
-          <div className="relative aspect-[4/5] overflow-hidden rounded-3xl shadow-2xl transition-transform duration-700 lg:rotate-2 lg:hover:rotate-0">
+        <div className="relative mx-auto w-full max-w-md lg:max-w-none">
+          <div className="relative aspect-[4/5] overflow-hidden rounded-2xl shadow-2xl transition-transform duration-700 sm:rounded-3xl lg:rotate-2 lg:hover:rotate-0">
             <Image
               src={heroImage.src}
               alt={heroImage.alt}
@@ -47,7 +47,7 @@ export function Hero() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
           </div>
-          <div className="absolute -bottom-6 -left-6 max-w-[240px] rounded-2xl border border-outline-variant/10 bg-surface-container-highest p-6 shadow-2xl">
+          <div className="mt-4 w-full max-w-[260px] rounded-2xl border border-outline-variant/10 bg-surface-container-highest p-5 shadow-2xl sm:max-w-[280px] sm:p-6 md:absolute md:-bottom-6 md:-left-6 md:mt-0">
             <p className="text-sm font-medium italic leading-relaxed text-white">
               &quot;The most precise growth partner we&apos;ve ever collaborated
               with.&quot;
@@ -60,7 +60,7 @@ export function Hero() {
                   className="text-sm text-primary-fixed"
                 />
               </div>
-              <span className="text-xs font-bold uppercase tracking-tighter text-on-surface-variant">
+              <span className="text-[11px] font-bold uppercase tracking-tight text-on-surface-variant">
                 Director of Aura Grooming
               </span>
             </div>
