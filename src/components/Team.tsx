@@ -11,13 +11,13 @@ const teamMembers: TeamMember[] = [
   {
     name: "Muhammad Talha",
     role: "Founder and CEO",
-    linkedin: "[url]",
-    instagram: "[url]",
+    linkedin: "linkedin.com/in/mohammad-talha0",
+    instagram: "https://www.instagram.com/akhi_.talha/",
   },
   {
     name: "Mashhood Akhund",
     role: "CO Founder and COO",
-    linkedin: "[url]",
+    linkedin: "https://www.linkedin.com/in/mashhood-akhund",
     instagram: "[url]",
   },
   {
