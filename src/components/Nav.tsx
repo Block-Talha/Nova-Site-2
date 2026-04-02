@@ -3,10 +3,12 @@
 import { useState } from "react";
 import Link from "next/link";
 import { BrandLogo } from "@/components/BrandLogo";
+import { DemoContactPopup } from "@/components/DemoContactPopup";
 import { navLinks } from "@/lib/site-content";
 
 export function Nav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isDemoPopupOpen, setIsDemoPopupOpen] = useState(false);
 
   function closeMenu() {
     setIsMenuOpen(false);
@@ -34,12 +36,13 @@ export function Nav() {
             ))}
           </div>
 
-          <Link
-            href="#contact"
+          <button
+            type="button"
+            onClick={() => setIsDemoPopupOpen(true)}
             className="hidden rounded-xl bg-primary-container px-5 py-2.5 font-headline text-sm font-bold text-on-primary-container transition-all duration-300 hover:shadow-[0_0_20px_rgba(202,253,0,0.3)] active:scale-95 sm:inline-flex"
           >
             Get Started
-          </Link>
+          </button>
 
           <button
             type="button"
@@ -77,6 +80,10 @@ export function Nav() {
           </div>
         </div>
       </div>
+      <DemoContactPopup
+        isOpen={isDemoPopupOpen}
+        onClose={() => setIsDemoPopupOpen(false)}
+      />
     </nav>
   );
 }

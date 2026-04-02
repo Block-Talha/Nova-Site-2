@@ -1,7 +1,12 @@
-import Link from "next/link";
+"use client";
+
+import { useState } from "react";
+import { DemoContactPopup } from "@/components/DemoContactPopup";
 import { plans, showPricing } from "@/lib/site-content";
 
 export function Pricing() {
+  const [isDemoPopupOpen, setIsDemoPopupOpen] = useState(false);
+
   return (
     <section id="pricing" className="section-space bg-surface-container-low">
       <div className="content-shell">
@@ -71,8 +76,9 @@ export function Pricing() {
                     </li>
                   ) : null}
                 </ul>
-                <Link
-                  href="#contact"
+                <button
+                  type="button"
+                  onClick={() => setIsDemoPopupOpen(true)}
                   className={
                     isFeatured
                       ? "block w-full rounded-xl bg-primary-container py-4 text-center text-xs font-bold uppercase tracking-widest text-on-primary-container transition-all hover:shadow-[0_0_20px_rgba(202,253,0,0.4)]"
@@ -80,11 +86,15 @@ export function Pricing() {
                   }
                 >
                   Book Your Demo
-                </Link>
+                </button>
               </article>
             );
           })}
         </div>
+        <DemoContactPopup
+          isOpen={isDemoPopupOpen}
+          onClose={() => setIsDemoPopupOpen(false)}
+        />
       </div>
     </section>
   );

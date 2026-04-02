@@ -1,6 +1,56 @@
-import Image from "next/image";
 import Link from "next/link";
-import { teamMembers } from "@/lib/site-content";
+
+type TeamMember = {
+  name: string;
+  role: string;
+  linkedin: string;
+  instagram: string;
+};
+
+const teamMembers: TeamMember[] = [
+  {
+    name: "Muhammad Talha",
+    role: "Founder and CEO",
+    linkedin: "[url]",
+    instagram: "[url]",
+  },
+  {
+    name: "Mashhood Akhund",
+    role: "CO Founder and COO",
+    linkedin: "[url]",
+    instagram: "[url]",
+  },
+  {
+    name: "Ahmad Faraz",
+    role: "CTO",
+    linkedin: "[url]",
+    instagram: "[url]",
+  },
+];
+
+function LinkedInIcon() {
+  return (
+    <svg
+      aria-hidden="true"
+      viewBox="0 0 24 24"
+      className="h-4 w-4 fill-current"
+    >
+      <path d="M4.98 3.5A2.49 2.49 0 0 0 2.5 6c0 1.37 1.11 2.48 2.48 2.48h.03A2.49 2.49 0 0 0 7.5 6 2.5 2.5 0 0 0 4.98 3.5ZM2.9 9.5h4.2v11H2.9v-11Zm6.5 0h4.02v1.5h.06c.56-1.06 1.92-2.18 3.96-2.18 4.23 0 5.01 2.78 5.01 6.39v5.29h-4.2v-4.69c0-1.12-.02-2.56-1.56-2.56-1.56 0-1.8 1.22-1.8 2.48v4.77h-4.2v-11Z" />
+    </svg>
+  );
+}
+
+function InstagramIcon() {
+  return (
+    <svg
+      aria-hidden="true"
+      viewBox="0 0 24 24"
+      className="h-4 w-4 fill-current"
+    >
+      <path d="M7.75 2h8.5A5.76 5.76 0 0 1 22 7.75v8.5A5.76 5.76 0 0 1 16.25 22h-8.5A5.76 5.76 0 0 1 2 16.25v-8.5A5.76 5.76 0 0 1 7.75 2Zm0 1.8A3.95 3.95 0 0 0 3.8 7.75v8.5a3.95 3.95 0 0 0 3.95 3.95h8.5a3.95 3.95 0 0 0 3.95-3.95v-8.5a3.95 3.95 0 0 0-3.95-3.95h-8.5Zm8.9 1.35a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 1.8a3.2 3.2 0 1 0 0 6.4 3.2 3.2 0 0 0 0-6.4Z" />
+    </svg>
+  );
+}
 
 export function Team() {
   return (
@@ -23,32 +73,38 @@ export function Team() {
             Join the Elite
           </Link>
         </div>
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-4">
-          {teamMembers.map((member) => (
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {teamMembers.map((member, index) => (
             <article
-              key={member.name}
-              className={`group cursor-pointer ${
-                member.staggered ? "xl:mt-10" : ""
-              }`}
+              key={`${member.name}-${index}`}
+              className="rounded-xl border border-outline-variant/10 bg-surface-container p-6 sm:p-8"
             >
-              <div className="relative mb-4 aspect-[3/4] overflow-hidden rounded-xl">
-                <Image
-                  src={member.image}
-                  alt={`Portrait of ${member.name}`}
-                  fill
-                  sizes="(max-width: 639px) 100vw, (max-width: 1279px) 50vw, 25vw"
-                  className="object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 flex items-end bg-primary-fixed/20 p-4 opacity-0 transition-opacity group-hover:opacity-100">
-                  <span className="text-xs font-black uppercase tracking-widest text-on-primary-fixed">
-                    {member.overlayRole}
-                  </span>
-                </div>
-              </div>
               <h4 className="font-headline text-lg font-bold text-white">
                 {member.name}
               </h4>
-              <p className="text-sm text-on-surface-variant">{member.title}</p>
+              <p className="mt-1 text-sm text-on-surface-variant">
+                {member.role}
+              </p>
+              <div className="mt-5 flex items-center gap-3">
+                <a
+                  href={member.linkedin}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={`${member.name} LinkedIn`}
+                  className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-outline-variant/30 text-on-surface-variant transition-colors hover:border-primary-fixed hover:text-primary-fixed"
+                >
+                  <LinkedInIcon />
+                </a>
+                <a
+                  href={member.instagram}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={`${member.name} Instagram`}
+                  className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-outline-variant/30 text-on-surface-variant transition-colors hover:border-primary-fixed hover:text-primary-fixed"
+                >
+                  <InstagramIcon />
+                </a>
+              </div>
             </article>
           ))}
         </div>
