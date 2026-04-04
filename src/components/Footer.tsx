@@ -5,7 +5,7 @@ const footerLinks = [
   { href: "#", label: "Privacy Policy" },
   { href: "#", label: "Terms of Service" },
   { href: "#", label: "Instagram" },
-  { href: "#", label: "LinkedIn" },
+  { href: "https://www.linkedin.com/company/novasyncsolution/ ", label: "LinkedIn" },
 ];
 
 export function Footer() {
