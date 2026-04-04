@@ -40,7 +40,7 @@ export function DemoContactPopup({ isOpen, onClose }: DemoContactPopupProps) {
              Phone Call
           </a>
           <a
-            href="wa.me/923283696394"
+            href="https://wa.me/923283696394"
             target="_blank"
             rel="noreferrer"
             className="block rounded-xl border border-outline-variant/30 px-4 py-3 text-center font-headline text-sm font-bold text-white transition-all hover:bg-white hover:text-black"
@@ -48,7 +48,7 @@ export function DemoContactPopup({ isOpen, onClose }: DemoContactPopupProps) {
              WhatsApp
           </a>
           <a
-            href="novasyncs.services@gmail.com"
+            href="mailto:novasyncs.services@gmail.com"
             className="block rounded-xl border border-outline-variant/30 px-4 py-3 text-center font-headline text-sm font-bold text-white transition-all hover:bg-white hover:text-black"
           >
              Gmail
