@@ -6,7 +6,7 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://novasyncservices.online/sitemap.xml",
-    host: "https://novasyncservices.online",
+    sitemap: "https://www.novasyncservices.online/sitemap.xml",
+    host: "https://www.novasyncservices.online",
   };
 }

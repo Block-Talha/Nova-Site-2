@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Manrope, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 
-const siteUrl = "https://novasyncservices.online";
+const siteUrl = "https://www.novasyncservices.online";
 const siteName = "Nova Sync Services";
 const defaultTitle = "Nova Sync Services | Electric Precision for Elite Salons";
 const defaultDescription =
