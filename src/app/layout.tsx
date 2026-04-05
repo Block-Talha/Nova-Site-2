@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Manrope, Plus_Jakarta_Sans } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const siteUrl = "https://www.novasyncservices.online";
@@ -7,6 +8,7 @@ const siteName = "Nova Sync Services";
 const defaultTitle = "Nova Sync Services | Electric Precision for Elite Salons";
 const defaultDescription =
   "Manage and grow your salon business with Nova Sync Services through elite branding, booking automation, and growth systems built for modern salons.";
+const googleAnalyticsId = "G-91GYL6RMV0";
 
 // Google Search Console setup:
 // 1) Add your token in .env as GOOGLE_SITE_VERIFICATION=your_token
@@ -141,6 +143,16 @@ export default function RootLayout({
       className={`dark ${plusJakartaSans.variable} ${manrope.variable}`}
     >
       <body className="min-h-screen bg-background font-body text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsId}`}
+          strategy="beforeInteractive"
+        />
+        <Script id="google-analytics" strategy="beforeInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', '${googleAnalyticsId}');`}
+        </Script>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
