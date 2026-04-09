@@ -1,5 +1,6 @@
+import Image from "next/image";
 import Link from "next/link";
-import { BrandLogo } from "@/components/BrandLogo";
+import footerLogo from "../../public/images/footer-logo.jpg";
 
 const footerLinks = [
   { href: "#", label: "Privacy Policy" },
@@ -14,7 +15,16 @@ export function Footer() {
       <div className="content-shell flex flex-col items-center justify-between gap-8 md:flex-row">
         <div className="flex flex-col items-center md:items-start">
           <div className="mb-4">
-            <BrandLogo compact />
+            <div className="flex items-center gap-2.5 sm:gap-3">
+              <Image
+                src={footerLogo}
+                alt="Nova Sync logo"
+                className="h-9 w-auto sm:h-10"
+              />
+              <span className="font-headline text-lg font-extrabold leading-none tracking-tight text-white sm:text-xl">
+                Nova Sync
+              </span>
+            </div>
           </div>
           <p className="text-center text-sm text-zinc-500 md:text-left">
             Copyright 2026 Nova Sync Marketing Agency. All rights reserved.

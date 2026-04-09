@@ -35,7 +35,7 @@ export function DemoContactPopup({ isOpen, onClose }: DemoContactPopupProps) {
         <div className="space-y-3">
           <a
             href="tel:+923105939786"
-            className="block rounded-xl bg-white px-4 py-3 text-center font-headline text-sm font-bold text-black transition-colors hover:bg-zinc-100"
+            className="block rounded-xl bg-primary-container px-4 py-3 text-center font-headline text-sm font-bold text-on-primary-container transition-all hover:shadow-[0_0_20px_rgba(202,253,0,0.35)]"
           >
              Phone Call
           </a>

@@ -22,9 +22,9 @@ const teamMembers: TeamMember[] = [
   },
   {
     name: "Ahmad Faraz",
-    role: "CTO",
-    linkedin: "[url]",
-    instagram: "[url]",
+    role: "Chief Technology Officer",
+    linkedin: "",
+    instagram: "",
   },
   {
     name: "Fatima Akhund",
