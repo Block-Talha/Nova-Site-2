@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { TeamJoinFormButton } from "./TeamJoinFormButton";
 
 type TeamMember = {
   name: string;
@@ -25,6 +25,12 @@ const teamMembers: TeamMember[] = [
     role: "CTO",
     linkedin: "[url]",
     instagram: "[url]",
+  },
+  {
+    name: "Fatima Akhund",
+    role: "Head of Sales",
+    linkedin: "",
+    instagram: "",
   },
 ];
 
@@ -66,12 +72,7 @@ export function Team() {
               artistic vision.
             </p>
           </div>
-          <Link
-            href="#contact"
-            className="w-full rounded-xl border border-outline-variant/30 px-6 py-3 text-center text-xs font-bold uppercase tracking-widest text-white transition-all hover:bg-white hover:text-black sm:w-auto"
-          >
-            Join the Elite
-          </Link>
+          <TeamJoinFormButton />
         </div>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {teamMembers.map((member, index) => (
