@@ -5,9 +5,10 @@ import "./globals.css";
 
 const siteUrl = "https://www.novasyncservices.online";
 const siteName = "Nova Sync Services";
-const defaultTitle = "Nova Sync Services | Electric Precision for Elite Salons";
+const defaultTitle =
+  "Nova Sync Services | Electric Precision for Clinics & Salons";
 const defaultDescription =
-  "Manage and grow your salon business with Nova Sync Services through elite branding, booking automation, and growth systems built for modern salons.";
+  "Manage and grow your clinic or salon with Nova Sync Services through elite branding, booking automation, and growth systems built for modern healthcare and beauty businesses.";
 const googleAnalyticsId = "G-91GYL6RMV0";
 
 // Google Search Console setup:
@@ -68,30 +69,51 @@ export const metadata: Metadata = {
   publisher: siteName,
   keywords: [
     "salon software",
+    "clinic management marketing",
+    "doctor appointment automation",
     "barbershop booking",
+    "clinic booking system",
     "whatsapp automation",
     "salon marketing",
+    "doctor marketing pakistan",
+    "clinic marketing pakistan",
     "google business profile",
     "local seo for salons",
+    "local seo for clinics",
     "salon marketing pakistan",
     "barbershop marketing pakistan",
+    "medical practice marketing pakistan",
     "barber shop software pakistan",
     "booking system pakistan salons",
+    "booking system pakistan clinics",
     "whatsapp reminders salon pakistan",
+    "whatsapp reminders clinic pakistan",
     "google ads for salons pakistan",
+    "google ads for clinics pakistan",
     "instagram marketing for salons pakistan",
+    "instagram marketing for clinics pakistan",
     "beauty salon website pakistan",
+    "doctor clinic website pakistan",
     "barbershop website pakistan",
     "hair salon growth agency pakistan",
+    "clinic growth agency pakistan",
     "grooming business marketing pakistan",
+    "healthcare marketing agency pakistan",
     "karachi salon marketing",
+    "karachi clinic marketing",
     "lahore salon marketing",
+    "lahore clinic marketing",
     "islamabad salon marketing",
+    "islamabad clinic marketing",
     "beauty parlor marketing pakistan",
     "salon seo pakistan",
+    "clinic seo pakistan",
     "barbershop seo pakistan",
     "digital marketing agency for salons",
+    "digital marketing agency for clinics",
     "salon lead generation pakistan",
+    "doctor lead generation pakistan",
+    "clinic lead generation pakistan",
     "nova sync services pakistan",
     "Nova Sync Services",
   ],
@@ -140,7 +162,7 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Nova Sync salon marketing landing page",
+        alt: "Nova Sync clinic and salon growth services landing page",
       },
     ],
   },

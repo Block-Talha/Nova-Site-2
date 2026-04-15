@@ -29,8 +29,9 @@ const teamMembers: TeamMember[] = [
   {
     name: "Fatima Akhund",
     role: "Head of Sales",
-    linkedin: "",
-    instagram: "",
+    linkedin: "https://www.linkedin.com/in/fatima-akhund-9292b8258?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B3A2wWyukSpKU%2BggDZlhhTA%3D%3D",
+    
+    instagram: "https://www.instagram.com/fatimagulakhund/",
   },
 ];
 

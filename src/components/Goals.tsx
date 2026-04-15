@@ -13,9 +13,9 @@ export function Goals() {
                 <span className="text-primary-fixed">Excellence Goals</span>
               </h2>
               <p className="max-w-md text-base leading-relaxed text-on-surface-variant sm:text-lg">
-                Our mission is simple: to set the gold standard in salon digital
-                transformation by delivering measurable, high-impact results for
-                every partner.
+                Our mission is simple: to set the gold standard in clinic and
+                salon digital transformation by delivering measurable,
+                high-impact results for every partner.
               </p>
             </div>
             <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6">

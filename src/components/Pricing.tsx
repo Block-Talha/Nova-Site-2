@@ -13,11 +13,11 @@ export function Pricing() {
         <div className="flex flex-col items-center justify-between gap-8">
           <div className="w-full">
             <h2 className="mb-4 text-center font-headline text-3xl font-extrabold text-white sm:text-4xl lg:text-5xl">
-              Tailored Solution for Thriving Salons
+              Tailored Solutions for Clinics & Salons
             </h2>
             <p className="mx-auto max-w-2xl text-center text-sm leading-relaxed text-on-surface-variant sm:text-base">
-              Choosing the plan that meshes your ambition, from local boutiques
-              to nationwide chains, we scale with you.
+              Choose the plan that fits your ambition, from independent clinics
+              and boutiques to multi-location healthcare and grooming brands.
             </p>
           </div>
         </div>

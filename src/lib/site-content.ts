@@ -1,6 +1,6 @@
 export const heroImage = {
   src: "https://lh3.googleusercontent.com/aida-public/AB6AXuB2Xx0lc8FpBPyfaz4SP_GETr6xKesDsyvWivevIxLyWvTMHQ0hR2qBmrvWcKwn5SB0GDe-LJO5qEjjuswOcfSJotFZl0_HjDMnEaGN6-i032Lyl6nwHlzwxftRm0GbStrIHOcsNQTWhFEwtEf4_2K8bTCCRDsBwDQXXS1hEOHP-77_5hjWt9qmn-8TYtIoaDbnPBNjeBvsfEBLC5Wa-osENnWebNiJ475jhu8aVvG1TMH4KTBsHTMQ-j-XSL29EtCIsp-DIp5JuB5n",
-  alt: "High-end modern barber shop interior with luxury black leather chairs and neon lime accents in a minimalist setting.",
+  alt: "High-end modern clinic and salon interior with premium seating in a minimalist setting.",
 };
 
 export const showPricing = process.env.NEXT_PUBLIC_SHOW_PRICING === "true";
@@ -15,9 +15,9 @@ export const navLinks = [
 export const goalMetrics = [
   {
     value: "16K+",
-    label: "Beauty Businesses",
+    label: "Service Businesses",
     description:
-      "Global trust from independent salons and major grooming chains.",
+      "Trusted by independent clinics, salons, and multi-location brands.",
   },
   {
     value: "230%",
@@ -58,7 +58,7 @@ export const plans: Plan[] = [
   },
   {
     name: "Professional Plan",
-    subtitle: "The elite choice for high-volume salons.",
+    subtitle: "The elite choice for high-volume clinics and salons.",
     price: "$510 /mo",
     badge: "Most Popular - 30% Off",
     featured: true,
@@ -105,26 +105,26 @@ export type Testimonial = {
 export const testimonials: Testimonial[] = [
   {
     name: "Sarah James",
-    company: "Luxe Salon",
+    company: "Luxe Skin Clinic",
     quote:
-      "Switching to Nova Sync was the best decision for Luxe Salon. Our bookings increased by 40% in the first quarter itself.",
+      "Switching to Nova Sync was the best decision for Luxe Skin Clinic. Our appointments increased by 40% in the first quarter.",
     image:
       "https://lh3.googleusercontent.com/aida-public/AB6AXuAZ5QPfiqX1Y16p_QybTuctDbUFIt-MUIf9g2INOU9ZGp8jkpryyEyFkU0CMc3U6qHJ7hIujKMluDGbiZj2-xbsSh_CrgITTMRJndgxN1XazuIVRH7NIwTgTt4TJ__4nLXfxbL1_RdsGg5nDF0XfINQdcD1LUxmd4PhsseDAC6rxnvx6-JOmFHAsSiW99bIuBN8Vr6IBw_wb5_iz0puJconkOKhvNLso2fOgajFSpOo2wHz9kbq_A6cFnkyd80qdfLDqZvUOBDtGui8",
   },
   {
     name: "Mike Chen",
-    company: "Sharp Cuts Barbershop",
+    company: "PrimeCare Medical Center",
     quote:
-      "The automated loyalty system and SMS reminders have significantly reduced our no-shows. It's like having an extra manager.",
+      "The automated reminders and reactivation workflows have significantly reduced missed appointments. It feels like having an extra operations manager.",
     image:
       "https://lh3.googleusercontent.com/aida-public/AB6AXuB1RvZB_Ttn2CakKrU1XvThlYcL8fqmqyVkaNs8QWdNj1O6NpAzjtKiFuai1n_YMCF0zuRJHeoTSsInlgN9kr76p4zO71lQGKfrWTm981XPER7bpVdZ1CrpkPurY461bexq5VjyUn2rGHnBM9Nko1gTcLXb2kIqvJ5NK_Z9MV0Q-6R50WMpvsxX81Ffk3Zj2zUtV3fXcEeYYx-I2AVQ1HTwJKZctVF5FoJxbkfgUUnHGAdbEHc9MTTmEmtBrgT4RZWDqh1SlKZ_IlVb",
     featured: true,
   },
   {
     name: "Alex Rivera",
-    company: "The Barber Shop",
+    company: "The Barber & Care Studio",
     quote:
-      "The churn alerts are a game changer. We reached back out to customers who hadn't visited in 40 days and recovered 15% of them.",
+      "The churn alerts are a game changer. We reached out to inactive clients after 40 days and recovered 15% of them.",
     image:
       "https://lh3.googleusercontent.com/aida-public/AB6AXuAy1bnPicvNjZtcdH2tAhrrYRkA49mgUHv00S-EHdvicY8i5PNkia0MqJZHVOaeh_ecIn7IGdS4PKmJNFZK4hBb_GDYmdT33RU4HnuS8H8m2Y_X7U7niPPl1rjw1W7f-v-fHnow0UUBqGk_YyeoD0bdZr9Wf14_e6JangxOwaemaYLeVrWl6ZFy42hmNodZPHXo1feD8wmBIV1exj-tCGAo0KlrhpbLFZtDLRxuEbRS94RUOaB0p4mgerCwoWZ8U_IFbqaCdriPkWT8",
   },
