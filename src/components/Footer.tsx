@@ -3,9 +3,9 @@ import Link from "next/link";
 import footerLogo from "../../public/images/footer-logo.jpg";
 
 const footerLinks = [
-  { href: "#", label: "Privacy Policy" },
-  { href: "#", label: "Terms of Service" },
-  { href: "#", label: "Instagram" },
+  { href: "", label: "Privacy Policy" },
+  { href: "", label: "Terms of Service" },
+  { href: "https://www.instagram.com/akhi_.talha/", label: "Instagram" },
   { href: "https://www.linkedin.com/company/novasyncsolution/ ", label: "LinkedIn" },
 ];
 
