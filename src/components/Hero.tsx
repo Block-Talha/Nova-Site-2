@@ -14,17 +14,17 @@ export function Hero() {
         <div className="space-y-8">
           <div className="inline-flex items-center gap-2 rounded-full border border-outline-variant/20 bg-surface-container-highest px-3 py-2 text-[10px] font-bold uppercase tracking-[0.22em] text-primary-fixed sm:px-4 sm:text-xs">
             <span className="h-2 w-2 animate-pulse rounded-full bg-primary-fixed" />
-            Elite Clinic & Salon Growth
+            Elite Salon Marketing
           </div>
           <h1 className="max-w-3xl font-headline text-4xl font-extrabold leading-[1.05] tracking-tighter text-white sm:text-5xl lg:text-7xl">
             Manage &amp; Grow Your{" "}
-            <span className="text-glow text-primary-fixed">Clinic or Salon</span>{" "}
+            <span className="text-glow text-primary-fixed">Salon Business</span>{" "}
             With Nova Sync
           </h1>
           <p className="max-w-xl text-base leading-relaxed text-on-surface-variant sm:text-lg lg:text-xl">
             Elevate your brand presence and streamline operations with our
-            electric-precision marketing solutions designed for modern clinics,
-            doctors, and grooming businesses.
+            electric-precision marketing solutions designed for the modern
+            grooming industry.
           </p>
           <div className="flex flex-col gap-4 pt-4 sm:flex-row">
             <Link
@@ -61,11 +61,11 @@ export function Hero() {
                 />
               </div>
               <span className="text-[11px] font-bold uppercase tracking-tight text-on-surface-variant">
-                Director of Aura Wellness
+                Director of Aura Grooming
               </span>
             </div>
           </div>
-        </div>
+          </div>
       </div>
     </section>
   );

@@ -6,9 +6,9 @@ import "./globals.css";
 const siteUrl = "https://www.novasyncservices.online";
 const siteName = "Nova Sync Services";
 const defaultTitle =
-  "Nova Sync Services | Electric Precision for Clinics & Salons";
+  "Nova Sync Services | Electric Precision for Elite Salons";
 const defaultDescription =
-  "Manage and grow your clinic or salon with Nova Sync Services through elite branding, booking automation, and growth systems built for modern healthcare and beauty businesses.";
+  "Manage and grow your salon business with Nova Sync Services through elite branding, booking automation, and growth systems built for modern salons.";
 const googleAnalyticsId = "G-91GYL6RMV0";
 
 // Google Search Console setup:
@@ -162,7 +162,7 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Nova Sync clinic and salon growth services landing page",
+        alt: "Nova Sync salon marketing landing page",
       },
     ],
   },

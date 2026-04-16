@@ -13,11 +13,11 @@ export function Pricing() {
         <div className="flex flex-col items-center justify-between gap-8">
           <div className="w-full">
             <h2 className="mb-4 text-center font-headline text-3xl font-extrabold text-white sm:text-4xl lg:text-5xl">
-              Tailored Solutions for Clinics & Salons
+               Tailored Solution for Thriving Salons
             </h2>
             <p className="mx-auto max-w-2xl text-center text-sm leading-relaxed text-on-surface-variant sm:text-base">
-              Choose the plan that fits your ambition, from independent clinics
-              and boutiques to multi-location healthcare and grooming brands.
+            Choosing the plan that meshes your ambition, from local boutiques
+            to nationwide chains, we scale with you.
             </p>
           </div>
         </div>
@@ -43,6 +43,7 @@ export function Pricing() {
                     {plan.badge}
                   </div>
                 )}
+
 
                 <h3 className="mb-2 font-headline text-xl font-bold uppercase tracking-widest text-primary-fixed">
                   {plan.name}

@@ -9,8 +9,7 @@ export function Testimonials() {
           Feedback By Our Clients
         </h2>
         <p className="mx-auto mb-12 max-w-2xl text-center text-sm text-on-surface-variant sm:mb-16 sm:text-base">
-          Success stories from clinics and salons that transformed their
-          bookings with Nova Sync.
+        Success stories from salons that transformed their bookings with Nova Sync.
         </p>
         <div className="grid gap-6 md:grid-cols-3">
           {testimonials.map((testimonial) => (
@@ -44,7 +43,7 @@ export function Testimonials() {
                   </p>
                 </div>
               </div>
-            </article>
+              </article>
           ))}
         </div>
       </div>

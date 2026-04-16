@@ -12,10 +12,10 @@ export function CTABanner() {
         <div className="group relative z-10 mx-auto max-w-5xl overflow-hidden rounded-3xl bg-primary-fixed p-8 text-center sm:p-12 lg:p-20">
           <div className="absolute -right-24 -top-24 h-64 w-64 rounded-full bg-white/20 blur-3xl transition-all duration-700 group-hover:bg-white/30" />
           <h2 className="mb-6 font-headline text-3xl font-black leading-tight text-on-primary-fixed sm:text-4xl lg:mb-8 lg:text-6xl">
-            Ready to boost your clinic or salon revenue?
+            Ready to boost your salon revenue?
           </h2>
           <p className="mx-auto mb-10 max-w-2xl text-base font-medium text-on-primary-fixed/80 sm:text-lg">
-            Join 16K+ healthcare and beauty businesses that have transformed
+            Join 16K+ beauty businesses that have transformed
             their digital presence with Nova Sync.
           </p>
           <button
