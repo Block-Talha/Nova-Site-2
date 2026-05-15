@@ -6,8 +6,8 @@ export function Footer() {
       id="contact"
       className="relative z-20 w-full border-t border-white/5 bg-zinc-950 py-16"
     >
-      <div className="mx-auto flex max-w-[1280px] flex-col items-start justify-between gap-12 px-8 md:flex-row">
-        <div className="ml-8 border-l-4 border-lime-400 pl-6">
+      <div className="mx-auto flex max-w-[1280px] flex-col items-start justify-between gap-12 px-4 sm:px-6 md:flex-row md:px-8">
+        <div className="ml-2 border-l-4 border-lime-400 pl-4 sm:ml-4 sm:pl-5 md:ml-8 md:pl-6">
           <div
             className="mb-4 text-xl font-black italic text-white"
             style={{ fontFamily: "Plus Jakarta Sans" }}
