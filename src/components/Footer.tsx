@@ -1,45 +1,66 @@
-import Image from "next/image";
 import Link from "next/link";
-import footerLogo from "../../public/images/footer-logo.jpg";
-
-const footerLinks = [
-  { href: "", label: "Privacy Policy" },
-  { href: "", label: "Terms of Service" },
-  { href: "https://www.instagram.com/akhi_.talha/", label: "Instagram" },
-  { href: "https://www.linkedin.com/company/novasyncsolution/ ", label: "LinkedIn" },
-];
 
 export function Footer() {
   return (
-    <footer className="w-full border-t border-zinc-800/20 bg-black py-10 sm:py-12">
-      <div className="content-shell flex flex-col items-center justify-between gap-8 md:flex-row">
-        <div className="flex flex-col items-center md:items-start">
-          <div className="mb-4">
-            <div className="flex items-center gap-2.5 sm:gap-3">
-              <Image
-                src={footerLogo}
-                alt="Nova Sync logo"
-                className="h-9 w-auto sm:h-10"
-              />
-              <span className="font-headline text-lg font-extrabold leading-none tracking-tight text-white sm:text-xl">
-                Nova Sync
-              </span>
-            </div>
+    <footer
+      id="contact"
+      className="relative z-20 w-full border-t border-white/5 bg-zinc-950 py-16"
+    >
+      <div className="mx-auto flex max-w-[1280px] flex-col items-start justify-between gap-12 px-8 md:flex-row">
+        <div className="ml-8 border-l-4 border-lime-400 pl-6">
+          <div
+            className="mb-4 text-xl font-black italic text-white"
+            style={{ fontFamily: "Plus Jakarta Sans" }}
+          >
+            Nova Sync
           </div>
-          <p className="text-center text-sm text-zinc-500 md:text-left">
-            Copyright 2026 Nova Sync Marketing Agency. All rights reserved.
+          <p className="max-w-xs text-sm text-zinc-500">
+            High-Octane Digital Growth algorithms for elite brands unwilling to
+            settle for average.
+          </p>
+          <p className="mt-6 text-sm text-zinc-500">
+            &copy; 2026 Nova Sync. High-Octane Digital Growth.
           </p>
         </div>
-        <div className="flex flex-wrap justify-center gap-x-6 gap-y-3 sm:gap-x-8">
-          {footerLinks.map((link) => (
+
+        <div className="flex flex-col gap-12 text-sm sm:flex-row md:gap-24">
+          <div className="flex flex-col gap-4">
+            <span className="mb-2 font-bold text-white">Navigation</span>
             <Link
-              key={link.label}
-              href={link.href}
-              className="text-sm font-medium text-zinc-600 transition-colors hover:text-white"
+              href="#pricing"
+              className="block text-lime-400 transition-all duration-200 hover:translate-x-1 hover:text-white"
             >
-              {link.label}
+              Solutions
             </Link>
-          ))}
+            <Link
+              href="#team"
+              className="block text-zinc-500 transition-all duration-200 hover:translate-x-1 hover:text-white"
+            >
+              Case Studies
+            </Link>
+            <Link
+              href="#solutions"
+              className="block text-zinc-500 transition-all duration-200 hover:translate-x-1 hover:text-white"
+            >
+              Services
+            </Link>
+          </div>
+
+          <div className="flex flex-col gap-4">
+            <span className="mb-2 font-bold text-white">Legal &amp; Contact</span>
+            <Link
+              href="#"
+              className="block text-zinc-500 transition-all duration-200 hover:translate-x-1 hover:text-white"
+            >
+              Privacy
+            </Link>
+            <Link
+              href="#contact"
+              className="block text-zinc-500 transition-all duration-200 hover:translate-x-1 hover:text-white"
+            >
+              Contact
+            </Link>
+          </div>
         </div>
       </div>
     </footer>

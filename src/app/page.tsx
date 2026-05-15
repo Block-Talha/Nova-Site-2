@@ -1,23 +1,21 @@
-import { CTABanner } from "@/components/CTABanner";
+import { CoreCapabilities } from "@/components/CoreCapabilities";
 import { Footer } from "@/components/Footer";
-import { Goals } from "@/components/Goals";
 import { Hero } from "@/components/Hero";
 import { Nav } from "@/components/Nav";
-import { Pricing } from "@/components/Pricing";
+import { Services } from "@/components/Services";
+import { TargetedSectors } from "@/components/TargetedSectors";
 import { Team } from "@/components/Team";
-import { Testimonials } from "@/components/Testimonials";
 
 export default function Home() {
   return (
     <>
       <Nav />
-      <main className="overflow-x-hidden bg-background text-on-surface">
+      <main className="relative z-10 pt-20">
         <Hero />
-        <Goals />
-        <Pricing />
-        <Testimonials />
+        <Services />
+        <TargetedSectors />
         <Team />
-        <CTABanner />
+        <CoreCapabilities />
       </main>
       <Footer />
     </>

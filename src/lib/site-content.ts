@@ -1,15 +1,14 @@
 export const heroImage = {
-  src: "https://lh3.googleusercontent.com/aida-public/AB6AXuB2Xx0lc8FpBPyfaz4SP_GETr6xKesDsyvWivevIxLyWvTMHQ0hR2qBmrvWcKwn5SB0GDe-LJO5qEjjuswOcfSJotFZl0_HjDMnEaGN6-i032Lyl6nwHlzwxftRm0GbStrIHOcsNQTWhFEwtEf4_2K8bTCCRDsBwDQXXS1hEOHP-77_5hjWt9qmn-8TYtIoaDbnPBNjeBvsfEBLC5Wa-osENnWebNiJ475jhu8aVvG1TMH4KTBsHTMQ-j-XSL29EtCIsp-DIp5JuB5n",
-  alt: "High-end modern barber shop interior with luxury black leather chairs and neon lime accents in a minimalist setting.",
+  src: "https://images.pexels.com/photos/34079362/pexels-photo-34079362.jpeg?cs=srgb&dl=pexels-thevisionaryvows-34079362.jpg&fm=jpg",
+  alt: "Elegant geometric light installation at night.",
 };
 
 export const showPricing = process.env.NEXT_PUBLIC_SHOW_PRICING === "true";
 
 export const navLinks = [
-  { href: "#home", label: "Home" },
-  { href: "#pricing", label: "Services" },
-  { href: "#team", label: "About Us" },
-  { href: "#contact", label: "Contact Us" },
+  { href: "#pricing", label: "Solutions" },
+  { href: "#solutions", label: "Services" },
+  { href: "#team", label: "Case Studies" },
 ] as const;
 
 export const goalMetrics = [

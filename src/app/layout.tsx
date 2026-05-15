@@ -207,6 +207,13 @@ gtag('config', '${googleAnalyticsId}');`}
             __html: JSON.stringify(websiteSchema),
           }}
         />
+        <div
+          className="pointer-events-none fixed inset-0 z-0"
+          aria-hidden="true"
+        >
+          <div className="absolute left-1/4 top-0 h-[800px] w-[800px] -translate-y-1/2 rounded-full bg-primary-fixed/5 blur-[120px] mix-blend-screen" />
+          <div className="absolute bottom-0 right-1/4 h-[600px] w-[600px] translate-y-1/2 rounded-full bg-primary-fixed/5 blur-[100px] mix-blend-screen" />
+        </div>
         {children}
       </body>
     </html>

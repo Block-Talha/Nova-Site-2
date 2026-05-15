@@ -1,72 +1,131 @@
-import Image from "next/image";
-import Link from "next/link";
-import { MaterialIcon } from "@/components/MaterialIcon";
+"use client";
+
+import { useState } from "react";
+import { DemoContactPopup } from "@/components/DemoContactPopup";
 import { heroImage } from "@/lib/site-content";
 
 export function Hero() {
+  const [isDemoPopupOpen, setIsDemoPopupOpen] = useState(false);
+
   return (
-    <section
-      id="home"
-      className="relative overflow-hidden pt-28 sm:pt-32"
-    >
-      <div className="bg-hero-radial absolute inset-0 z-0 opacity-90" />
-      <div className="content-shell relative z-10 grid min-h-[calc(100svh-5rem)] items-center gap-10 pb-14 sm:pb-16 lg:grid-cols-2 lg:gap-14">
-        <div className="space-y-8">
-          <div className="inline-flex items-center gap-2 rounded-full border border-outline-variant/20 bg-surface-container-highest px-3 py-2 text-[10px] font-bold uppercase tracking-[0.22em] text-primary-fixed sm:px-4 sm:text-xs">
-            <span className="h-2 w-2 animate-pulse rounded-full bg-primary-fixed" />
-            Elite Salon Marketing
-          </div>
-          <h1 className="max-w-3xl font-headline text-4xl font-extrabold leading-[1.05] tracking-tighter text-white sm:text-5xl lg:text-7xl">
-            Manage &amp; Grow Your{" "}
-            <span className="text-glow text-primary-fixed">Salon Business</span>{" "}
-            With Nova Sync
-          </h1>
-          <p className="max-w-xl text-base leading-relaxed text-on-surface-variant sm:text-lg lg:text-xl">
-            Elevate your brand presence and streamline operations with our
-            electric-precision marketing solutions designed for the modern
-            grooming industry.
-          </p>
-          <div className="flex flex-col gap-4 pt-4 sm:flex-row">
-            <Link
-              href="#pricing"
-              className="w-full rounded-xl bg-primary-container px-8 py-4 text-center font-headline font-bold uppercase tracking-widest text-on-primary-container transition-all hover:shadow-[0_0_30px_rgba(202,253,0,0.4)] active:scale-95 sm:w-auto"
-            >
-              Claim Your Strategy
-            </Link>
-          </div>
-        </div>
-        <div className="relative mx-auto w-full max-w-md lg:max-w-none">
-          <div className="relative aspect-[4/5] overflow-hidden rounded-2xl shadow-2xl transition-transform duration-700 sm:rounded-3xl lg:rotate-2 lg:hover:rotate-0">
-            <Image
-              src={heroImage.src}
-              alt={heroImage.alt}
-              fill
-              preload
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover grayscale-[0.2] transition-all duration-1000 hover:grayscale-0"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
-          </div>
-          <div className="mt-4 w-full max-w-[260px] rounded-2xl border border-outline-variant/10 bg-surface-container-highest p-5 shadow-2xl sm:max-w-[280px] sm:p-6 md:absolute md:-bottom-6 md:-left-6 md:mt-0">
-            <p className="text-sm font-medium italic leading-relaxed text-white">
-              &quot;The most precise growth partner we&apos;ve ever collaborated
-              with.&quot;
-            </p>
-            <div className="mt-4 flex items-center gap-3">
-              <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary-fixed/20 text-primary-fixed">
-                <MaterialIcon
-                  name="star"
-                  filled
-                  className="text-sm text-primary-fixed"
-                />
-              </div>
-              <span className="text-[11px] font-bold uppercase tracking-tight text-on-surface-variant">
-                Director of Aura Grooming
+    <>
+      <section
+        id="home"
+        className="relative mx-auto max-w-container-max px-4 py-16 sm:px-6 sm:py-20 lg:px-gutter lg:py-section-padding"
+      >
+        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-stack-lg">
+          <div className="z-10 space-y-stack-md">
+            <div className="inline-flex items-center gap-2 rounded-full border border-outline-variant/30 bg-surface-container/50 px-4 py-2 backdrop-blur-md">
+              <span className="h-2 w-2 animate-pulse rounded-full bg-primary-fixed" />
+              <span className="font-label-xs uppercase tracking-[0.2em] text-on-surface">
+                High-Octane Marketing
               </span>
             </div>
+
+            <h1 className="font-display-xl text-4xl font-extrabold leading-tight text-on-surface sm:text-5xl lg:text-6xl">
+              Electric Precision:
+              <br />
+              <span className="text-primary-container">The Pulse Dashboard</span>
+            </h1>
+
+            <p className="max-w-xl font-body-lg text-base text-on-surface-variant sm:text-lg">
+              Dominate your market with data-driven precision. Nova Sync fuses
+              aggressive growth strategies with crystal-clear analytics,
+              transforming your operational chaotic energy into streamlined,
+              high-ROI performance.
+            </p>
+
+            <div className="flex flex-col gap-4 pt-4 sm:flex-row sm:flex-wrap">
+              <button
+                type="button"
+                onClick={() => setIsDemoPopupOpen(true)}
+                className="w-full rounded-DEFAULT bg-primary-container px-8 py-4 font-title-md text-on-primary-container transition-all duration-300 hover:bg-primary-fixed hover:shadow-[0_0_20px_rgba(195,244,0,0.4)] active:scale-95 sm:w-auto"
+              >
+                Ignite Growth
+              </button>
+              <button
+                type="button"
+                onClick={() => setIsDemoPopupOpen(true)}
+                className="group flex w-full items-center justify-center gap-2 rounded-DEFAULT border border-outline-variant bg-transparent px-8 py-4 font-title-md text-on-surface transition-all duration-300 hover:border-primary-fixed hover:text-primary-container active:scale-95 sm:w-auto"
+              >
+                <span className="material-symbols-outlined text-xl group-hover:text-primary-container">
+                  play_circle
+                </span>
+                View Demo
+              </button>
+            </div>
           </div>
+
+          <div className="relative flex h-[360px] w-full items-center justify-center transition-transform duration-700 hover:rotate-0 sm:h-[460px] lg:h-[600px] lg:rotate-2">
+            <div className="absolute inset-0 overflow-hidden rounded-xl border border-outline-variant/20 bg-gradient-to-tr from-surface-container-lowest to-surface-container shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
+              <img
+                src={heroImage.src}
+                alt={heroImage.alt}
+                className="h-full w-full object-cover opacity-60 mix-blend-overlay"
+              />
+
+              <div className="animate-bounce-slow absolute left-3 top-4 flex items-center gap-3 rounded-lg border border-outline-variant/30 bg-surface-dim/80 p-4 shadow-2xl backdrop-blur-xl sm:left-4 sm:top-12 sm:gap-4 sm:p-6">
+                <div className="rounded-full bg-primary-container/20 p-2 sm:p-3">
+                  <span
+                    className="material-symbols-outlined text-lg text-primary-container sm:text-2xl"
+                    style={{ fontVariationSettings: "'FILL' 1" }}
+                  >
+                    trending_up
+                  </span>
+                </div>
+                <div>
+                  <p className="font-label-xs uppercase text-on-surface-variant">
+                    Average ROI
+                  </p>
+                  <p className="font-title-md text-sm text-primary-container sm:text-base">
+                    230%
+                  </p>
+                </div>
+              </div>
+
+              <div className="animate-bounce-slow-reverse absolute bottom-4 right-3 flex items-center gap-3 rounded-lg border border-outline-variant/30 bg-surface-dim/80 p-4 shadow-2xl backdrop-blur-xl sm:bottom-12 sm:right-4 sm:gap-4 sm:p-6">
+                <div className="rounded-full bg-primary-container/20 p-2 sm:p-3">
+                  <span
+                    className="material-symbols-outlined text-lg text-primary-container sm:text-2xl"
+                    style={{ fontVariationSettings: "'FILL' 1" }}
+                  >
+                    group
+                  </span>
+                </div>
+                <div>
+                  <p className="font-label-xs uppercase text-on-surface-variant">
+                    Active Agencies
+                  </p>
+                  <p className="font-title-md text-sm text-on-surface sm:text-base">
+                    16K+
+                  </p>
+                </div>
+              </div>
+
+              <div
+                className="absolute inset-x-8 bottom-20 top-28 flex items-end gap-3 sm:inset-x-14 sm:bottom-24 sm:top-32 sm:gap-4 lg:inset-x-20 lg:bottom-28 lg:top-36"
+                role="img"
+                aria-label="Campaign performance chart"
+              >
+                <div className="h-1/4 w-full rounded-t-sm bg-primary-container/25 transition-colors hover:bg-primary-container/40" />
+                <div className="h-2/4 w-full rounded-t-sm bg-primary-container/35 transition-colors hover:bg-primary-container/50" />
+                <div className="relative h-3/4 w-full rounded-t-sm bg-primary-container/55 transition-colors hover:bg-primary-container/70">
+                  <div className="absolute -top-8 left-1/2 -translate-x-1/2 whitespace-nowrap rounded border border-outline-variant bg-surface/90 px-2 py-1 text-xs font-bold text-on-surface backdrop-blur">
+                    Peak
+                  </div>
+                </div>
+                <div className="h-1/2 w-full rounded-t-sm bg-primary-container/45 transition-colors hover:bg-primary-container/60" />
+                <div className="h-full w-full rounded-t-sm bg-primary-container/90 shadow-[0_0_18px_rgba(195,244,0,0.35)] transition-colors hover:bg-primary-container" />
+              </div>
+            </div>
           </div>
-      </div>
-    </section>
+        </div>
+      </section>
+
+      <DemoContactPopup
+        isOpen={isDemoPopupOpen}
+        onClose={() => setIsDemoPopupOpen(false)}
+      />
+    </>
   );
 }

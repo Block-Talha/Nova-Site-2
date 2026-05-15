@@ -1,4 +1,5 @@
-import { TeamJoinFormButton } from "./TeamJoinFormButton";
+import { TeamJoinFormButton } from "@/components/TeamJoinFormButton";
+import type { ReactNode } from "react";
 
 type TeamMember = {
   name: string;
@@ -18,7 +19,8 @@ const teamMembers: TeamMember[] = [
     name: "Mashhood Akhund",
     role: "CO Founder and COO",
     linkedin: "https://www.linkedin.com/in/mashhood-akhund",
-    instagram: "https://www.instagram.com/mashhood.0?igsh=MWcyNzkwODVuN3pwMg==",
+    instagram:
+      "https://www.instagram.com/mashhood.0?igsh=MWcyNzkwODVuN3pwMg==",
   },
   {
     name: "Ahmad Faraz",
@@ -29,8 +31,8 @@ const teamMembers: TeamMember[] = [
   {
     name: "Fatima Akhund",
     role: "Head of Sales",
-    linkedin: "https://www.linkedin.com/in/fatima-akhund-9292b8258?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B3A2wWyukSpKU%2BggDZlhhTA%3D%3D",
-    
+    linkedin:
+      "https://www.linkedin.com/in/fatima-akhund-9292b8258?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B3A2wWyukSpKU%2BggDZlhhTA%3D%3D",
     instagram: "https://www.instagram.com/fatimagulakhund/",
   },
 ];
@@ -59,57 +61,95 @@ function InstagramIcon() {
   );
 }
 
+function SocialLink({
+  href,
+  label,
+  children,
+}: {
+  href: string;
+  label: string;
+  children: ReactNode;
+}) {
+  if (!href) {
+    return (
+      <span
+        aria-label={`${label} unavailable`}
+        className="inline-flex h-10 w-10 cursor-not-allowed items-center justify-center rounded-lg border border-outline-variant/20 text-on-surface-variant/40"
+      >
+        {children}
+      </span>
+    );
+  }
+
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noreferrer"
+      aria-label={label}
+      className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-outline-variant/30 text-on-surface-variant transition-colors hover:border-primary-fixed hover:text-primary-fixed"
+    >
+      {children}
+    </a>
+  );
+}
+
 export function Team() {
   return (
-    <section id="team" className="section-space bg-surface">
-      <div className="content-shell">
-        <div className="mb-12 flex flex-col justify-between gap-6 md:mb-16 md:flex-row md:items-end">
-          <div className="max-w-xl">
-            <h2 className="mb-4 font-headline text-3xl font-extrabold text-white sm:text-4xl lg:text-5xl">
-              Professional Creative Team
-            </h2>
-            <p className="text-sm text-on-surface-variant sm:text-base">
-              The minds behind the magic. Our team blends technical mastery with
-              artistic vision.
-            </p>
-          </div>
-          <TeamJoinFormButton />
-        </div>
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {teamMembers.map((member, index) => (
-            <article
-              key={`${member.name}-${index}`}
-              className="rounded-xl border border-outline-variant/10 bg-surface-container p-6 sm:p-8"
-            >
-              <h4 className="font-headline text-lg font-bold text-white">
-                {member.name}
-              </h4>
-              <p className="mt-1 text-sm text-on-surface-variant">
-                {member.role}
-              </p>
-              <div className="mt-5 flex items-center gap-3">
-                <a
+    <section
+      id="team"
+      className="relative mx-auto max-w-container-max border-t border-outline-variant/10 px-4 py-16 sm:px-6 sm:py-20 lg:px-gutter lg:py-section-padding"
+    >
+      <div className="mb-stack-lg text-center">
+        <span className="mb-4 block font-label-xs uppercase tracking-[0.3em] text-primary-container">
+          Our Experts
+        </span>
+        <h2 className="font-headline-lg text-on-surface">
+          Professional Creative Team
+        </h2>
+        <p className="mx-auto mt-4 max-w-2xl font-body-lg text-on-surface-variant">
+          The minds behind the magic. Our team blends technical mastery with
+          artistic vision.
+        </p>
+      </div>
+
+      <div className="relative z-10 grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4 lg:gap-8">
+        {teamMembers.map((member) => (
+          <article
+            key={member.name}
+            className="group relative overflow-hidden rounded-xl border border-outline-variant/20 bg-surface-container-low p-6 transition-all duration-300 hover:border-primary-fixed/50 hover:shadow-[0_0_20px_rgba(195,244,0,0.05)] sm:p-8"
+          >
+            <div className="absolute left-0 top-0 h-full w-1 bg-outline-variant/20 transition-colors duration-300 group-hover:bg-primary-fixed" />
+            <div className="flex min-h-44 flex-col justify-between">
+              <div>
+                <h3 className="font-title-md text-on-surface">
+                  {member.name}
+                </h3>
+                <p className="mt-2 font-body-sm text-on-surface-variant">
+                  {member.role}
+                </p>
+              </div>
+              <div className="mt-8 flex items-center gap-3">
+                <SocialLink
                   href={member.linkedin}
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label={`${member.name} LinkedIn`}
-                  className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-outline-variant/30 text-on-surface-variant transition-colors hover:border-primary-fixed hover:text-primary-fixed"
+                  label={`${member.name} LinkedIn`}
                 >
                   <LinkedInIcon />
-                </a>
-                <a
+                </SocialLink>
+                <SocialLink
                   href={member.instagram}
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label={`${member.name} Instagram`}
-                  className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-outline-variant/30 text-on-surface-variant transition-colors hover:border-primary-fixed hover:text-primary-fixed"
+                  label={`${member.name} Instagram`}
                 >
                   <InstagramIcon />
-                </a>
+                </SocialLink>
               </div>
-            </article>
-          ))}
-        </div>
+            </div>
+          </article>
+        ))}
+      </div>
+
+      <div className="mt-stack-md flex justify-center">
+        <TeamJoinFormButton />
       </div>
     </section>
   );
