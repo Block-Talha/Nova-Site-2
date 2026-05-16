@@ -6,9 +6,9 @@ export const heroImage = {
 export const showPricing = process.env.NEXT_PUBLIC_SHOW_PRICING === "true";
 
 export const navLinks = [
-  { href: "#pricing", label: "Solutions" },
-  { href: "#solutions", label: "Services" },
-  { href: "#team", label: "Case Studies" },
+  { href: "#partnership", label: "Solutions" },
+  { href: "#pricing", label: "Services" },
+  { href: "#solutions", label: "Case Studies" },
 ] as const;
 
 export const goalMetrics = [

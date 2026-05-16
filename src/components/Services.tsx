@@ -16,9 +16,16 @@ const services: ServiceCard[] = [
     title: "Advertising & Marketing",
     icon: "campaign",
     features: [
-      "Multi-Channel Media Buying",
-      "Conversion Rate Optimization",
-      "Retargeting Architecture",
+      "META (Facebook, Instagram) Ads",
+      "Google Ads",
+      "TikTok Ads",
+      "Social Media Management",
+      "Influencer Marketing",
+      "Email Marketing Campaign",
+      "Facebook & Instagram paid campaigns",
+      "TikTok paid advertising campaigns",
+      "Content creation, posting & growth",
+      "Local influencer outreach & coordination",
     ],
   },
   {
@@ -26,9 +33,16 @@ const services: ServiceCard[] = [
     title: "Website & Online Presence",
     icon: "language",
     features: [
-      "High-Performance Landing Pages",
-      "SEO Dominance Strategies",
-      "UX/UI Technical Audits",
+      "Website Design & Development",
+      "Microsite / Landing Page",
+      "SEO (Search Engine Optimization)",
+      "Google Business Profile Setup",
+      "Website Maintenance",
+      "Custom business website build",
+      "Single-page booking / promo site",
+      "On-page & local SEO optimization",
+      "Google Maps & local listing management",
+      "Monthly updates, hosting & support",
     ],
   },
   {
@@ -36,9 +50,10 @@ const services: ServiceCard[] = [
     title: "Branding & Creative",
     icon: "branding_watermark",
     features: [
-      "Elite Identity Systems",
-      "High-Conversion Copywriting",
-      "Video Asset Production",
+      "Logo & Brand Identity Design",
+      "Graphic Design (Posts & Creatives)",
+      "Photography / Videography Coordination",
+      "Promotional Video / Reel Editing",
     ],
   },
 ];
@@ -48,9 +63,11 @@ const featuredService: ServiceCard = {
   title: "WhatsApp & Automation",
   icon: "forum",
   features: [
-    "Automated Funnel Integration",
-    "24/7 AI Lead Qualification",
-    "Drip Campaign Sequences",
+    "WhatsApp Business Setup",
+    "WhatsApp Automation & Chatbot",
+    "WhatsApp Broadcast Campaigns",
+    "CRM Integration",
+    "Profile, catalog & initial configuration",
   ],
 };
 
@@ -172,10 +189,10 @@ export function Services() {
               <div className="w-full flex-1 rounded-lg border border-outline-variant/10 bg-surface-dim p-5 sm:p-6">
                 <ul className="grid grid-cols-1 gap-x-4 gap-y-3 font-body-sm text-on-surface-variant sm:grid-cols-2">
                   {[
-                    "CRM Architecture",
-                    "API Integrations",
-                    "Analytics Dashboards",
-                    "Sales Team Training",
+                    "Online Booking System Setup",
+                    "Loyalty Program Design",
+                    "JazzCash / EasyPaisa Integration",
+                    "Monthly Performance Reporting",
                   ].map((feature) => (
                     <CheckItem key={feature} label={feature} />
                   ))}

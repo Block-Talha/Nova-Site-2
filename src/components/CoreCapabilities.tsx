@@ -60,7 +60,7 @@ export function CoreCapabilities() {
           </div>
         </div>
 
-        <div className="mt-stack-lg text-center">
+        <div id="partnership" className="mt-stack-lg scroll-mt-28 text-center">
           <button
             type="button"
             onClick={() => setIsDemoPopupOpen(true)}
