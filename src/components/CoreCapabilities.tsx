@@ -14,7 +14,7 @@ export function CoreCapabilities() {
             Core Capabilities
           </h2>
           <p className="mx-auto mt-4 max-w-2xl font-body-lg text-on-surface-variant">
-            The fundamental pillars of our high-octane growth methodology.
+            The fundamental pillars of our growth methodology.
           </p>
         </div>
 

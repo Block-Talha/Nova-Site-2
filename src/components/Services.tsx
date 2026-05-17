@@ -123,7 +123,7 @@ export function Services() {
             The Arsenal
           </span>
           <h2 className="font-headline-lg text-on-surface">
-            High-Octane Services
+            Growth Services
           </h2>
           <p className="mx-auto mt-4 max-w-2xl font-body-lg text-on-surface-variant">
             Comprehensive digital domination tools engineered for premium

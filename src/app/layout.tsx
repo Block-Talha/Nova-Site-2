@@ -6,9 +6,9 @@ import "./globals.css";
 const siteUrl = "https://www.novasyncservices.online";
 const siteName = "Nova Sync Services";
 const defaultTitle =
-  "Nova Sync Services | Electric Precision for Elite Salons";
+  "Nova Sync Services | Digital Marketing Agency Pakistan";
 const defaultDescription =
-  "Manage and grow your salon business with Nova Sync Services through elite branding, booking automation, and growth systems built for modern salons.";
+  "Nova Sync Services helps gyms, clinics, wedding venues, restaurants, coaching institutes, real estate developers, salons, and service brands grow across Pakistan.";
 const googleAnalyticsId = "G-91GYL6RMV0";
 
 // Google Search Console setup:
@@ -23,6 +23,8 @@ const organizationSchema = {
   name: siteName,
   url: siteUrl,
   logo: `${siteUrl}/android-chrome-512x512.png`,
+  description: defaultDescription,
+  email: "novasyncs.services@gmail.com",
   // Add your social profile links below (LinkedIn/Instagram/Facebook/etc.)
   // Example: "https://www.linkedin.com/company/your-company"
   sameAs: [],
@@ -42,7 +44,83 @@ const websiteSchema = {
   "@type": "WebSite",
   name: siteName,
   url: siteUrl,
+  description: defaultDescription,
+  inLanguage: ["en-PK", "en"],
 };
+
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "AdvertisingAgency",
+  name: siteName,
+  url: siteUrl,
+  logo: `${siteUrl}/android-chrome-512x512.png`,
+  image: `${siteUrl}/og-image.png`,
+  description: defaultDescription,
+  email: "novasyncs.services@gmail.com",
+  telephone: "+92-328-3696394",
+  address: {
+    "@type": "PostalAddress",
+    addressCountry: "PK",
+  },
+  areaServed: [
+    { "@type": "City", name: "Karachi" },
+    { "@type": "City", name: "Lahore" },
+    { "@type": "City", name: "Islamabad" },
+    { "@type": "Country", name: "Pakistan" },
+  ],
+  serviceType: [
+    "Digital Marketing",
+    "SEO",
+    "Google Ads",
+    "Meta Ads",
+    "Website Design",
+    "WhatsApp Automation",
+    "Lead Generation",
+    "Branding",
+  ],
+};
+
+const keywords: string[] = [
+  "nova sync services",
+  "nova sync services pakistan",
+  "digital marketing agency pakistan",
+  "digital marketing services pakistan",
+  "karachi digital marketing agency",
+  "lahore digital marketing agency",
+  "islamabad digital marketing agency",
+  "growth marketing agency pakistan",
+  "lead generation agency pakistan",
+  "seo agency pakistan",
+  "website design company pakistan",
+  "branding agency pakistan",
+  "social media marketing pakistan",
+  "google ads agency pakistan",
+  "meta ads agency pakistan",
+  "whatsapp marketing pakistan",
+  "whatsapp automation pakistan",
+  "gym marketing pakistan",
+  "fitness center marketing pakistan",
+  "clinic digital marketing pakistan",
+  "doctor marketing pakistan",
+  "private clinic marketing karachi",
+  "wedding venue marketing pakistan",
+  "banquet hall marketing pakistan",
+  "restaurant marketing pakistan",
+  "restaurant digital marketing karachi",
+  "cafe marketing pakistan",
+  "coaching institute marketing pakistan",
+  "education marketing pakistan",
+  "real estate marketing pakistan",
+  "property lead generation pakistan",
+  "real estate digital marketing karachi",
+  "salon marketing pakistan",
+  "barbershop marketing pakistan",
+  "google business profile setup pakistan",
+  "landing page design pakistan",
+  "website maintenance pakistan",
+  "crm integration pakistan",
+  "email marketing pakistan",
+];
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -67,58 +145,15 @@ export const metadata: Metadata = {
   category: "business",
   creator: siteName,
   publisher: siteName,
-  keywords: [
-    "salon software",
-    "clinic management marketing",
-    "doctor appointment automation",
-    "barbershop booking",
-    "clinic booking system",
-    "whatsapp automation",
-    "salon marketing",
-    "doctor marketing pakistan",
-    "clinic marketing pakistan",
-    "google business profile",
-    "local seo for salons",
-    "local seo for clinics",
-    "salon marketing pakistan",
-    "barbershop marketing pakistan",
-    "medical practice marketing pakistan",
-    "barber shop software pakistan",
-    "booking system pakistan salons",
-    "booking system pakistan clinics",
-    "whatsapp reminders salon pakistan",
-    "whatsapp reminders clinic pakistan",
-    "google ads for salons pakistan",
-    "google ads for clinics pakistan",
-    "instagram marketing for salons pakistan",
-    "instagram marketing for clinics pakistan",
-    "beauty salon website pakistan",
-    "doctor clinic website pakistan",
-    "barbershop website pakistan",
-    "hair salon growth agency pakistan",
-    "clinic growth agency pakistan",
-    "grooming business marketing pakistan",
-    "healthcare marketing agency pakistan",
-    "karachi salon marketing",
-    "karachi clinic marketing",
-    "lahore salon marketing",
-    "lahore clinic marketing",
-    "islamabad salon marketing",
-    "islamabad clinic marketing",
-    "beauty parlor marketing pakistan",
-    "salon seo pakistan",
-    "clinic seo pakistan",
-    "barbershop seo pakistan",
-    "digital marketing agency for salons",
-    "digital marketing agency for clinics",
-    "salon lead generation pakistan",
-    "doctor lead generation pakistan",
-    "clinic lead generation pakistan",
-    "nova sync services pakistan",
-    "Nova Sync Services",
-  ],
+  keywords,
+  referrer: "origin-when-cross-origin",
+  authors: [{ name: siteName, url: siteUrl }],
   alternates: {
     canonical: "/",
+    languages: {
+      "en-PK": "/",
+      en: "/",
+    },
   },
   manifest: "/site.webmanifest",
   icons: {
@@ -155,14 +190,14 @@ export const metadata: Metadata = {
     description: defaultDescription,
     url: siteUrl,
     siteName,
-    locale: "en_US",
+    locale: "en_PK",
     type: "website",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Nova Sync salon marketing landing page",
+        alt: "Nova Sync Services digital marketing agency for gyms, clinics, restaurants, wedding venues, real estate, and salons in Pakistan.",
       },
     ],
   },
@@ -205,6 +240,12 @@ gtag('config', '${googleAnalyticsId}');`}
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(websiteSchema),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(localBusinessSchema),
           }}
         />
         <div

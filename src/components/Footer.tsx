@@ -15,11 +15,10 @@ export function Footer() {
             Nova Sync
           </div>
           <p className="max-w-xs text-sm text-zinc-500">
-            High-Octane Digital Growth algorithms for elite brands unwilling to
-            settle for average.
+            Digital growth systems for ambitious businesses across Pakistan.
           </p>
           <p className="mt-6 text-sm text-zinc-500">
-            &copy; 2026 Nova Sync. High-Octane Digital Growth.
+            &copy; 2026 Nova Sync. Digital Growth Systems.
           </p>
         </div>
 

@@ -18,7 +18,7 @@ export function Hero() {
             <div className="inline-flex items-center gap-2 rounded-full border border-outline-variant/30 bg-surface-container/50 px-4 py-2 backdrop-blur-md">
               <span className="h-2 w-2 animate-pulse rounded-full bg-primary-fixed" />
               <span className="font-label-xs uppercase tracking-[0.2em] text-on-surface">
-                High-Octane Marketing
+                Digital Growth
               </span>
             </div>
 

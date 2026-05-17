@@ -29,7 +29,10 @@ export function TargetedSectors() {
       </div>
 
       <div className="grid grid-cols-1 gap-4 auto-rows-[180px] sm:auto-rows-[200px] md:grid-cols-2 lg:grid-cols-4">
-        <div className="group relative overflow-hidden rounded-xl border border-outline-variant/20 bg-surface-container-low transition-colors hover:border-primary-fixed/50 lg:col-span-2 lg:row-span-2">
+        <div
+          aria-label="Digital marketing services for private clinics in Pakistan"
+          className="group relative overflow-hidden rounded-xl border border-outline-variant/20 bg-surface-container-low transition-colors hover:border-primary-fixed/50 lg:col-span-2 lg:row-span-2"
+        >
           <img
             src={sectorImages.clinics}
             alt="A high-end modern private medical clinic reception area."
@@ -54,7 +57,10 @@ export function TargetedSectors() {
           </div>
         </div>
 
-        <div className="group relative overflow-hidden rounded-xl border border-outline-variant/20 bg-surface-container-low transition-colors hover:border-primary-fixed/50">
+        <div
+          aria-label="Gym and fitness center marketing agency Pakistan"
+          className="group relative overflow-hidden rounded-xl border border-outline-variant/20 bg-surface-container-low transition-colors hover:border-primary-fixed/50"
+        >
           <div className="absolute inset-0 bg-gradient-to-br from-surface-container-highest to-surface-dim opacity-80 transition-opacity group-hover:opacity-100" />
           <div className="relative flex h-full flex-col justify-end p-5 sm:p-6">
             <span className="material-symbols-outlined mb-auto text-3xl text-on-surface transition-colors group-hover:text-primary-container">
@@ -66,7 +72,10 @@ export function TargetedSectors() {
           </div>
         </div>
 
-        <div className="group relative overflow-hidden rounded-xl border border-outline-variant/20 bg-surface-container-low transition-colors hover:border-primary-fixed/50">
+        <div
+          aria-label="Wedding venue and banquet hall marketing Pakistan"
+          className="group relative overflow-hidden rounded-xl border border-outline-variant/20 bg-surface-container-low transition-colors hover:border-primary-fixed/50"
+        >
           <img
             src={sectorImages.wedding}
             alt="An elegant modern luxury wedding venue set up for a night reception."
@@ -83,7 +92,10 @@ export function TargetedSectors() {
           </div>
         </div>
 
-        <div className="group relative overflow-hidden rounded-xl border border-outline-variant/20 bg-surface-container-low transition-colors hover:border-primary-fixed/50">
+        <div
+          aria-label="Coaching institute and education marketing Pakistan"
+          className="group relative overflow-hidden rounded-xl border border-outline-variant/20 bg-surface-container-low transition-colors hover:border-primary-fixed/50"
+        >
           <div className="absolute inset-0 bg-gradient-to-tr from-surface-dim to-surface-container-highest opacity-80 transition-opacity group-hover:opacity-100" />
           <div className="relative flex h-full flex-col justify-end p-5 sm:p-6">
             <span className="material-symbols-outlined mb-auto text-3xl text-on-surface transition-colors group-hover:text-primary-container">
@@ -95,7 +107,10 @@ export function TargetedSectors() {
           </div>
         </div>
 
-        <div className="group relative overflow-hidden rounded-xl border border-outline-variant/20 bg-surface-container-low transition-colors hover:border-primary-fixed/50">
+        <div
+          aria-label="Restaurant and cafe digital marketing Pakistan"
+          className="group relative overflow-hidden rounded-xl border border-outline-variant/20 bg-surface-container-low transition-colors hover:border-primary-fixed/50"
+        >
           <img
             src={sectorImages.restaurants}
             alt="A dark, moody, ultra-luxurious modern restaurant interior."
@@ -112,7 +127,10 @@ export function TargetedSectors() {
           </div>
         </div>
 
-        <div className="group relative flex items-center justify-between gap-4 overflow-hidden rounded-xl border border-outline-variant/20 bg-surface-container-low p-5 transition-colors hover:border-primary-fixed/50 sm:p-6 lg:col-span-2 lg:p-8">
+        <div
+          aria-label="Real estate lead generation and property marketing Pakistan"
+          className="group relative flex items-center justify-between gap-4 overflow-hidden rounded-xl border border-outline-variant/20 bg-surface-container-low p-5 transition-colors hover:border-primary-fixed/50 sm:p-6 lg:col-span-2 lg:p-8"
+        >
           <div className="absolute inset-0 bg-gradient-to-r from-surface-container-highest to-surface-dim opacity-80 transition-opacity group-hover:opacity-100" />
           <div className="relative z-10 flex min-w-0 items-center gap-4 sm:gap-6">
             <div className="shrink-0 rounded-lg border border-outline-variant/30 bg-surface-dim p-3 sm:p-4">
